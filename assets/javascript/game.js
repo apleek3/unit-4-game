@@ -14,7 +14,27 @@ $(document).ready(function () {
     console.log(targetNumber);
     console.log(crystalsTotal);
     console.log(crystals);
-    console.log("ready!");
+
+    $('#firstCrystal').prepend('<img id="green" class="img-thumbnail crystal-img" src="./assets/images/green.png" />')
+    $('#secondCrystal').prepend('<img id="topaz" class="img-thumbnail crystal-img" src="./assets/images/topaz.png" />')
+    $('#thirdCrystal').prepend('<img id="purple" class="img-thumbnail crystal-img" src="./assets/images/purple.png" />')
+    $('#fourthCrystal').prepend('<img id="red" class="img-thumbnail crystal-img" src="./assets/images/red.png" />')
+
+    var greenCrystal = $("#firstCrystal");
+    var topazCrystal = $("#secondCrystal");
+    var purpleCrystal = $("#thirdCrystal");
+    var redCrystal = $("fourthCrystal");
+
+    greenCrystal.attr("randomCrystalValue", crystals[0]);
+    topazCrystal.attr("randomCrystalValue", crystals[1]);
+    purpleCrystal.attr("randomCrystalValue", crystals[2]);
+    redCrystal.attr("randomCrystalValue", crystals[3]);
+
+
 });
 
 
+$(".crystal-img").on("click", function() {
+
+
+});
